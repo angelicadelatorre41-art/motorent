@@ -1,0 +1,336 @@
+
+/* =====================================
+   MOTORENT - MAIN STYLESHEET
+   ===================================== */
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* COLOR VARIABLES */
+:root {
+    --navy: #101c35;
+    --navy-light: #1d2d4f;
+    --orange: #ff8c00;
+    --orange-hover: #e67800;
+    --white: #ffffff;
+    --gray: #6c757d;
+    --light-gray: #f4f6f9;
+    --border: #e5e7eb;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    background-color: var(--navy) !important;
+    padding: 15px 25px;
+}
+
+.navbar-brand {
+    color: var(--white) !important;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-brand span {
+    color: var(--orange);
+}
+
+.navbar .nav-link {
+    color: var(--white) !important;
+    margin-left: 12px;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: var(--orange) !important;
+}
+
+/* BUTTONS */
+.btn-primary,
+.btn-orange {
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover,
+.btn-orange:hover {
+    background-color: var(--orange-hover);
+    color: var(--white);
+}
+
+.btn-dark {
+    background-color: var(--navy);
+    border: none;
+}
+
+.btn-dark:hover {
+    background-color: var(--navy-light);
+}
+
+/* PAGE CONTAINER */
+.container {
+    max-width: 1200px;
+}
+
+/* PAGE HEADINGS */
+h1, h2, h3, h4, h5 {
+    color: var(--navy);
+    font-weight: bold;
+}
+
+.section-title {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(
+        135deg,
+        #101c35,
+        #263d66
+    );
+    color: var(--white);
+    padding: 65px 35px;
+    border-radius: 12px;
+    margin: 30px 0;
+}
+
+.hero h1,
+.hero h2 {
+    color: var(--white);
+}
+
+.hero p {
+    color: #e5e7eb;
+    font-size: 17px;
+}
+
+.hero .highlight {
+    color: var(--orange);
+}
+
+/* DASHBOARD CARDS */
+.dashboard-card,
+.stat-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dashboard-card:hover,
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.10);
+}
+
+.stat-card h3 {
+    font-size: 30px;
+    color: var(--orange);
+}
+
+.stat-card p {
+    color: var(--gray);
+}
+
+/* MOTORCYCLE GALLERY */
+.motorcycle-section {
+    padding: 35px 0;
+}
+
+.motorcycle-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    height: 100%;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.motorcycle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* MOTORCYCLE IMAGES */
+.motorcycle-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    background-color: #eeeeee;
+}
+
+.motorcycle-card .card-body {
+    padding: 20px;
+}
+
+.motorcycle-card h5 {
+    color: var(--navy);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.motorcycle-card p {
+    color: var(--gray);
+}
+
+/* GENERAL CARDS */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    background-color: var(--navy);
+    color: var(--white);
+    font-weight: bold;
+}
+
+/* TABLES */
+.table {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+.table th,
+.table td {
+    padding: 13px;
+    vertical-align: middle;
+}
+
+/* FORMS */
+.form-control,
+.form-select {
+    padding: 11px;
+    border-radius: 7px;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.15);
+}
+
+/* BADGES */
+.badge-orange {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 7px 12px;
+    border-radius: 20px;
+}
+
+/* QUICK ACCESS */
+.quick-access {
+    background-color: var(--white);
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.quick-access:hover {
+    border-color: var(--orange);
+    transform: translateY(-4px);
+}
+
+.quick-access h5 {
+    margin-top: 12px;
+}
+
+/* ALERTS */
+.alert {
+    border-radius: 8px;
+    padding: 15px;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .hero {
+        padding: 35px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 23px;
+    }
+
+    .motorcycle-image {
+        height: 200px;
+    }
+
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .dashboard-card,
+    .stat-card {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .motorcycle-image {
+        height: 180px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+}
